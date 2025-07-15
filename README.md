@@ -8,12 +8,12 @@ Source Code: [https://github.com/codezaemon/yojanasaathi](https://github.com/cod
 
 ---
 
-## 🧠 Sub-theme
+## Sub-theme
 **Building for Bharat** — Leveraging GenAI to bridge the awareness gap in rural and underserved communities about government schemes, ensuring inclusivity and access.
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
 | Component             | Tool/Library                        | License  | Role/Use |
 |----------------------|--------------------------------------|----------|----------|
@@ -27,7 +27,7 @@ Source Code: [https://github.com/codezaemon/yojanasaathi](https://github.com/cod
 
 ---
 
-## 🚀 Features
+## Features
 
 - Conversational UI with WhatsApp-inspired styling
 - Supports Hindi, English, and Hinglish queries
@@ -37,7 +37,7 @@ Source Code: [https://github.com/codezaemon/yojanasaathi](https://github.com/cod
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 yojanasaathi/
@@ -52,7 +52,7 @@ yojanasaathi/
 
 ---
 
-## 🛠️ Setup Guide (Run Locally)
+## Setup Guide (Run Locally)
 
 ### 1. Clone the repository
 
@@ -92,7 +92,7 @@ streamlit run app.py
 
 ---
 
-## 📄 Sample Schemes Included
+## Sample Schemes Included
 
 - Ayushman Bharat (PM-JAY)
 - PM KISAN
@@ -104,7 +104,7 @@ streamlit run app.py
 
 ---
 
-## 📝 Open Source Attribution
+## Open Source Attribution
 
 | Library | Version | License | Role | Link |
 |---------|---------|---------|------|------|
@@ -115,7 +115,7 @@ streamlit run app.py
 
 ---
 
-## 💡 Future Enhancements
+## Future Enhancements
 
 - Add FAISS + Embeddings for true RAG retrieval
 - Multilingual voice support (speech-to-text)
@@ -124,7 +124,7 @@ streamlit run app.py
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - Google Gemini API
 - Streamlit Cloud for deployment
@@ -132,7 +132,7 @@ streamlit run app.py
 
 ---
 
-## 💬 License
+## License
 
 This repository is open for educational and non-commercial use under the MIT License.
 
