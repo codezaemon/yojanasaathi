@@ -2,6 +2,21 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 import google.generativeai as genai
+from langdetect import detect
+
+# Language detection helper
+def detect_language(text):
+    try:
+        lang = detect(text)
+        if lang == 'hi':
+            return 'Hindi'
+        elif lang == 'en':
+            return 'English'
+        else:
+            return 'Hinglish'
+    except:
+        return 'Hinglish'
+
 
 # Load environment variables
 load_dotenv()
@@ -298,10 +313,17 @@ context = load_scheme_documents()
 # Gemini response function
 def get_gemini_response(user_query, context):
     model = genai.GenerativeModel("gemini-1.5-flash")
+    
+    # Detect language of the query
+    user_lang = detect_language(user_query)
+
+    # Updated prompt with explicit language instruction
     prompt = f"""
 You are YojanaSaathi, an assistant that helps Indian citizens understand government welfare schemes.
 
-Use the following scheme information to answer clearly, simply, and in the same language as the user's question (Hindi/English/Hinglish).
+Use the following scheme information to answer clearly, simply, and in the same language as the user's question.
+
+The user has asked their question in **{user_lang}**, so respond only in **{user_lang}**, using natural expressions in that language. Do not switch languages mid-answer.
 
 Context:
 {context}
@@ -310,8 +332,10 @@ Question:
 {user_query}
 
 Answer:"""
+    
     response = model.generate_content(prompt)
     return response.text.strip()
+
 
 # Initialize chat history
 if "chat_history" not in st.session_state:
